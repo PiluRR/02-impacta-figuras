@@ -1,0 +1,46 @@
+package logico;
+
+public class TodasFiguras {
+    public static void main(String[] args) {
+        String [] [] quadrado = new String[5][5];
+        System.out.println("QUADRADO");
+        for (int linha = 0; linha < quadrado.length; linha++) {
+            for (int coluna = 0; coluna < quadrado[linha].length; coluna++) {
+                quadrado[linha][coluna] = "o";
+                System.out.print(quadrado[linha][coluna] + "  ");
+            }
+            System.out.println();
+        }
+        System.out.println("RETÂNGULO");
+        String [] [] retangulo = new String[5][9];
+        for (int linha = 0; linha < retangulo.length; linha++) {
+            for (int coluna = 0; coluna < retangulo[linha].length; coluna++) {
+                if (linha == 0 || linha == retangulo.length - 1) {
+                    retangulo[linha][coluna] = "o";
+                System.out.print(retangulo[linha][coluna] + " ");
+                } else if (coluna == 0 || coluna == retangulo[linha].length - 1) {
+                    retangulo[linha][coluna] = "o";
+                    System.out.print(retangulo[linha][coluna] + " ");
+                } else {
+                    retangulo[linha][coluna] = " ";
+                    System.out.print(retangulo[linha][coluna] + " ");
+                }
+            }
+            System.out.println();
+        }
+        System.out.println("TRIÂNGULO");
+        String[][] triangulo = new String[5][9];
+        int modificador = 0;
+        for (int linha = 0; linha < triangulo.length; linha++) {
+            for (int coluna = 0; coluna < triangulo[linha].length; coluna++) {
+                if (coluna >= triangulo[linha].length / 2 - modificador && coluna <= triangulo[linha].length / 2 + modificador) {
+                    System.out.print("o ");
+                } else {
+                    System.out.print("  ");
+                }
+            }
+            modificador++;
+            System.out.println();
+        }
+    }
+}
