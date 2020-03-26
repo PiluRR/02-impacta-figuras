@@ -2,8 +2,8 @@ package logico;
 
 public class TodasFiguras {
     public static void main(String[] args) {
-        String [] [] quadrado = new String[5][5];
         System.out.println("QUADRADO");
+        String [] [] quadrado = new String[5][5];
         for (int linha = 0; linha < quadrado.length; linha++) {
             for (int coluna = 0; coluna < quadrado[linha].length; coluna++) {
                 quadrado[linha][coluna] = "o";
