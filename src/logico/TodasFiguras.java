@@ -34,10 +34,13 @@ public class TodasFiguras {
         for (int linha = 0; linha < triangulo.length; linha++) {
             for (int coluna = 0; coluna < triangulo[linha].length; coluna++) {
                 if (coluna >= triangulo[linha].length / 2 - modificador && coluna <= triangulo[linha].length / 2 + modificador) {
-                    System.out.print("o ");
+                    triangulo[linha][coluna] = "o";
+                    System.out.print(triangulo[linha][coluna]);
                 } else {
-                    System.out.print("  ");
+                    triangulo[linha][coluna] = " ";
+                    System.out.print(triangulo[linha][coluna]);
                 }
+                System.out.print(" ");
             }
             modificador++;
             System.out.println();

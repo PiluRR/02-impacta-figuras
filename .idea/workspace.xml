@@ -2,6 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="63d9afdd-9496-4ddf-9d02-ba5c4e77affd" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/logico/TodasFiguras.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/logico/TodasFiguras.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -89,7 +91,14 @@
       <option name="project" value="LOCAL" />
       <updated>1585254249357</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="Correcao condicional triangulo">
+      <created>1585254507418</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1585254507419</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -111,10 +120,10 @@
     <option name="LAST_COMMIT_MESSAGE" value="Correcao condicional triangulo" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="599" y="119" key="CommitChangelistDialog2" timestamp="1585254246814">
+    <state x="599" y="119" key="CommitChangelistDialog2" timestamp="1585254504913">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
-    <state x="599" y="119" key="CommitChangelistDialog2/0.0.1920.1050@0.0.1920.1050" timestamp="1585254246814" />
+    <state x="599" y="119" key="CommitChangelistDialog2/0.0.1920.1050@0.0.1920.1050" timestamp="1585254504913" />
     <state x="740" y="279" key="FileChooserDialogImpl" timestamp="1585250956976">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
