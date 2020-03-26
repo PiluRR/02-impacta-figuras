@@ -30,10 +30,9 @@ public class TodasFiguras {
         }
         System.out.println("TRIÂNGULO");
         String[][] triangulo = new String[5][9];
-        int modificador = 0;
         for (int linha = 0; linha < triangulo.length; linha++) {
             for (int coluna = 0; coluna < triangulo[linha].length; coluna++) {
-                if (coluna >= triangulo[linha].length / 2 - modificador && coluna <= triangulo[linha].length / 2 + modificador) {
+                if (coluna >= triangulo[linha].length / 2 - linha && coluna <= triangulo[linha].length / 2 + linha) {
                     triangulo[linha][coluna] = "o";
                     System.out.print(triangulo[linha][coluna]);
                 } else {
@@ -42,7 +41,6 @@ public class TodasFiguras {
                 }
                 System.out.print(" ");
             }
-            modificador++;
             System.out.println();
         }
     }
