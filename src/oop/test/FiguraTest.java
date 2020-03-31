@@ -9,5 +9,9 @@ public class FiguraTest {
         Quadrado quadrado = new Quadrado();
         Retangulo retangulo = new Retangulo();
         Triangulo triangulo = new Triangulo();
+
+        quadrado.desenhar();
+        retangulo.desenhar();
+        triangulo.desenhar();
     }
 }
