@@ -1,29 +1,20 @@
 package oop.model;
 
 public class Retangulo {
-    int altura;     //DEFINE A ALTURA DO OBJETO (LINHAS)
-    int largura;    //DEFINE A LARGURA DO OBJETO (COLUNAS)
-    String simbolo; //DEFINE O CARACTER QUE O OBJETO SERA PREENCHIDO
-    String fundo;   //DEFINE O CARACTER DE FUNDO QUE O OBJETO SERA PREENCHIDO
+    public int altura;     //DEFINE A ALTURA DO OBJETO (LINHAS)
+    public int largura;    //DEFINE A LARGURA DO OBJETO (COLUNAS)
+    public String simbolo; //DEFINE O CARACTER QUE O OBJETO SERA PREENCHIDO
+    public String fundo;   //DEFINE O CARACTER DE FUNDO QUE O OBJETO SERA PREENCHIDO
 
-    public void desenhar() {
-        System.out.println("RETÂNGULO");
-        String [] [] retangulo = new String[5][9];
-        for (int linha = 0; linha < retangulo.length; linha++) {
-            for (int coluna = 0; coluna < retangulo[linha].length; coluna++) {
-                if (linha == 0 || linha == retangulo.length - 1) {
-                    retangulo[linha][coluna] = "o";
-                    System.out.print(retangulo[linha][coluna] + " ");
-                } else if (coluna == 0 || coluna == retangulo[linha].length - 1) {
-                    retangulo[linha][coluna] = "o";
-                    System.out.print(retangulo[linha][coluna] + " ");
-                } else {
-                    retangulo[linha][coluna] = " ";
-                    System.out.print(retangulo[linha][coluna] + " ");
-                }
+    public String desenhar() {
+        System.out.printf("RETÂNGULO (%d x %d)\n", altura, largura);
+        StringBuilder desenho = new StringBuilder();
+        for (int linha = 0; linha < altura; linha++) {
+            for (int coluna = 0; coluna < largura; coluna++) {
+                desenho.append(simbolo + " ");
             }
-            System.out.println();
+            desenho.append("\n");
         }
-        System.out.println();
+        return desenho.toString();
     }
 }

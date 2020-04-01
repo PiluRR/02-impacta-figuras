@@ -1,19 +1,48 @@
 package oop.model;
 
 public class Quadrado {
-    int altura;     //DEFINE A ALTURA DO OBJETO (LINHAS)
-    int largura;    //DEFINE A LARGURA DO OBJETO (COLUNAS)
-    String simbolo; //DEFINE O CARACTERE QUE O OBJETO SERA PREENCHIDO
-    public void desenhar() {
-        System.out.println("QUADRADO");
-        String [] [] quadrado = new String[5][5];
-        for (int linha = 0; linha < quadrado.length; linha++) {
-            for (int coluna = 0; coluna < quadrado[linha].length; coluna++) {
-                quadrado[linha][coluna] = "o";
-                System.out.print(quadrado[linha][coluna] + "  ");
+    private int altura;     //DEFINE A ALTURA DO OBJETO (LINHAS)
+    private int largura;    //DEFINE A LARGURA DO OBJETO (COLUNAS)
+    private String simbolo; //DEFINE O CARACTERE QUE O OBJETO SERA PREENCHIDO
+
+    public int getAltura() {
+        return altura;
+    }
+
+    public void setAltura(int altura) {
+        this.altura = altura;
+    }
+
+    public int getLargura() {
+        return largura;
+    }
+
+    public void setLargura(int largura) {
+        this.largura = largura;
+    }
+
+    public String getSimbolo() {
+        return simbolo;
+    }
+
+    public void setSimbolo(String simbolo) {
+        this.simbolo = simbolo;
+    }
+
+    public String desenhar() {
+        StringBuilder desenho = new StringBuilder();
+        desenho.append(this.toString());
+        for (int linha = 0; linha < altura; linha++) {
+            for (int coluna = 0; coluna < largura; coluna++) {
+                desenho.append(simbolo + "  ");
             }
-            System.out.println();
+            desenho.append("\n");
         }
-        System.out.println();
+        return desenho.toString();
+    }
+
+    @Override
+    public String toString() {
+        return String.format("QUADRADO (%d x %d)\n", altura, largura);
     }
 }
