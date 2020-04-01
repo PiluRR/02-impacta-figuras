@@ -1,7 +1,5 @@
 package oop.model;
 
-import java.util.concurrent.atomic.AtomicIntegerFieldUpdater;
-
 public class Retangulo {
     public int altura;     //DEFINE A ALTURA DO OBJETO (LINHAS)
     public int largura;    //DEFINE A LARGURA DO OBJETO (COLUNAS)
@@ -23,7 +21,7 @@ public class Retangulo {
         }
 
         System.out.printf("RETANGULO (%d x %d)\n", altura, largura);
-        for (int linha = 0; linha < retangulo.length; linha++) {
+        for(int linha = 0; linha < retangulo.length; linha++) {
             for (int coluna = 0; coluna < retangulo[linha].length; coluna++) {
                 System.out.print(retangulo[linha][coluna]);
             }
