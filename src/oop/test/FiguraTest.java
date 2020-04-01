@@ -17,7 +17,7 @@ public class FiguraTest {
         retangulo.largura = 9;
         retangulo.simbolo = "#";
         retangulo.fundo = "-";
-        System.out.println(retangulo.desenhar());
+        retangulo.desenhar();
 
         Triangulo triangulo = new Triangulo();
         triangulo.altura = 5;
