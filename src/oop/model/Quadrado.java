@@ -5,6 +5,14 @@ public class Quadrado {
     private int largura;    //DEFINE A LARGURA DO OBJETO (COLUNAS)
     private String simbolo; //DEFINE O CARACTERE QUE O OBJETO SERA PREENCHIDO
 
+    public Quadrado() {}
+
+    public Quadrado(int altura, int largura, String simbolo) {
+        this.altura = altura;
+        this.largura = largura;
+        this.simbolo = simbolo;
+    }
+
     public int getAltura() {
         return altura;
     }
@@ -32,9 +40,9 @@ public class Quadrado {
     public String desenhar() {
         StringBuilder desenho = new StringBuilder();
         desenho.append(this.toString());
-        for (int linha = 0; linha < altura; linha++) {
-            for (int coluna = 0; coluna < largura; coluna++) {
-                desenho.append(simbolo + "  ");
+        for (int linha = 0; linha < getAltura(); linha++) {
+            for (int coluna = 0; coluna < getLargura(); coluna++) {
+                desenho.append(getSimbolo() + "  ");
             }
             desenho.append("\n");
         }
@@ -43,6 +51,6 @@ public class Quadrado {
 
     @Override
     public String toString() {
-        return String.format("QUADRADO (%d x %d)\n", altura, largura);
+        return String.format("%s (%d x %d)\n", getClass().getSimpleName(), getAltura(), getLargura());
     }
 }
