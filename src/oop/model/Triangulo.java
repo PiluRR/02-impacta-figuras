@@ -2,10 +2,11 @@ package oop.model;
 
 public class Triangulo extends Figura {
 
-    public Triangulo(int altura, int largura, String simbolo, String fundo) {
-        super(altura, largura, simbolo, fundo);
+    public Triangulo() {
+        super(5, 9, "@", "-");
     }
 
+    @Override
     public String desenhar() {
         int meio = getLargura() / 2;
         StringBuilder desenho = new StringBuilder();
@@ -13,18 +14,13 @@ public class Triangulo extends Figura {
         for (int linha = 0; linha < getAltura(); linha++) {
             for (int coluna = 0; coluna < getLargura(); coluna++) {
                 if (coluna >= meio - linha && coluna <= meio + linha) {
-                    desenho.append(getSimbolo() + " ");
+                    desenho.append(getSimbolo()).append(" ");
                 } else {
-                    desenho.append(getFundo() + " ");
+                    desenho.append(getFundo()).append(" ");
                 }
             }
                 desenho.append("\n");
         }
         return desenho.toString();
-    }
-
-    @Override
-    public String toString() {
-        return String.format("%s (%d x %d)\n", getClass().getSimpleName(), getAltura(), getLargura());
     }
 }

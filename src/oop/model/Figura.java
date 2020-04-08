@@ -1,21 +1,18 @@
 package oop.model;
 
-public class Figura {
+public abstract class Figura {
     private int altura;
     private int largura;
     private String simbolo;
     private String fundo;
 
-    public Figura() {
-        super();
+    public Figura(int lado, String simbolo) {
+        this(lado, lado, simbolo);
     }
 
     public Figura(int altura, int largura, String simbolo) {
-        this.altura = altura;
-        this.largura = largura;
-        this.simbolo = simbolo;
+        this(altura, largura, simbolo, " ");
     }
-
     public Figura(int altura, int largura, String simbolo, String fundo) {
         super();
         this.altura = altura;
@@ -55,6 +52,8 @@ public class Figura {
     public void setFundo(String fundo) {
         this.fundo = fundo;
     }
+
+    public abstract String desenhar();
 
     @Override
     public String toString() {
