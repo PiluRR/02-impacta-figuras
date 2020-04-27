@@ -1,13 +1,15 @@
 package oop.view;
 
+import javax.swing.JComboBox;
+
 import oop.model.Figura;
 import oop.model.Quadrado;
 import oop.model.Retangulo;
 import oop.model.Triangulo;
 
-import javax.swing.JComboBox;
+public class FiguraComboBox extends JComboBox<Figura>{
+    private static final long serialVersionUID = 1L;
 
-public class FiguraComboBox extends JComboBox<Figura> {
     public FiguraComboBox() {
         super(new Figura[] {
                 new Quadrado(),

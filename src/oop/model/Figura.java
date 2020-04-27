@@ -6,13 +6,16 @@ public abstract class Figura {
     private String simbolo;
     private String fundo;
 
+    //QUADRADO
     public Figura(int lado, String simbolo) {
         this(lado, lado, simbolo);
     }
 
+    //RETANGULO OU TRIANGULO
     public Figura(int altura, int largura, String simbolo) {
         this(altura, largura, simbolo, " ");
     }
+
     public Figura(int altura, int largura, String simbolo, String fundo) {
         super();
         this.altura = altura;
